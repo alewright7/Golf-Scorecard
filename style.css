@@ -1,0 +1,132 @@
+:root {
+    --bg: #f9f9f9;
+    --text: #111;
+    --container-bg: #fff;
+    --table-header: #e9ecef;
+    --button-bg: #28a745;
+    --button-bg-hover: #218838;
+    --input-bg: #fff;
+    --border-color: #ccc;
+}
+
+body.dark {
+    --bg: #1e1e1e;
+    --text: #f1f1f1;
+    --container-bg: #2c2c2c;
+    --table-header: #333;
+    --button-bg: #3ba169;
+    --button-bg-hover: #2e8153;
+    --input-bg: #3c3c3c;
+    --border-color: #555;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    background-color: var(--container-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+input, select, button {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: var(--input-bg);
+    color: var(--text);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-bg-hover);
+}
+
+table {
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+}
+
+th {
+    background-color: var(--table-header);
+}
+
+/* Toggle Switch */
+.dark-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin: 0 2rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #28a745;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}

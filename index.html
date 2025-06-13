@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Scorecard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Golf Scorecard</h1>
+        <div class="dark-toggle">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+            <span>Dark Mode</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <label for="mode">Select mode:</label>
+            <select id="mode">
+                <option value="9">9 Holes</option>
+                <option value="18">18 Holes</option>
+            </select>
+
+            <label for="score">Enter your score:</label>
+            <input type="number" id="score" placeholder="e.g. 4" />
+            <button id="addBtn" onclick="enterScore()">Add Score</button>
+
+            <table id="scoreTable">
+                <thead>
+                    <tr>
+                        <th>Hole</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Scores will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
